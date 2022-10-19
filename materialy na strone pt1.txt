@@ -1,0 +1,8 @@
+materialy na strone pt1
+
+kolory morskie i białe
+header taki sam kolor co body
+footer ten sam kolor co nav
+
+color palethe
+https://www.canva.com/colors/color-palettes/dessert-over-tea/
