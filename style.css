@@ -7,14 +7,15 @@ body{
 
 header{
     text-align: center;
+    vertical-align: center;
 }
 
-header, nav, footer, main{
+header, footer, main{
     padding-left: 2vw;
     padding-right: 2vw;
 }
 
-footer,header{
+footer{
     padding-top: 2vw;
     padding-bottom: 1.5vw;
 }
@@ -27,6 +28,7 @@ nav{
     padding: 0.5vw;
     padding-left: 2.5vw;
     width: 97vw;
+    overflow: auto;
 }
 
 nav .icon{
@@ -35,7 +37,6 @@ nav .icon{
 
 nav a, .dropbtn{
     float: left;
-    display: block;
     text-align: center;
     padding: 16px 30px;
     font-size: 18px;
@@ -54,13 +55,8 @@ nav a.active {
     color: #f4f9f8;
 }
 
-.dropbtn{
-    background-color: #87e6df;
-    border: 0px;
-}
-
 .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 
@@ -75,13 +71,11 @@ nav a.active {
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
 }
 
 .dropdown-content a {
     color: #2d5f68;
     padding: 15px 30px;
-    
     text-decoration: none;
     display: block;
 }
@@ -96,10 +90,6 @@ nav a.active {
   
 .dropdown:hover .dropbtn {
     background-color: #95d3cf;
-}
-
-main{
-    min-height: 75vh;
 }
 
 footer{
@@ -122,5 +112,9 @@ footer{
         display: block;
         padding: 0;
         padding-right: 15px;
+    }
+
+    .dropdown{
+        display: none;
     }
 }
