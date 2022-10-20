@@ -6,3 +6,7 @@ footer ten sam kolor co nav
 
 color palethe
 https://www.canva.com/colors/color-palettes/dessert-over-tea/
+
+
+#2d5f68
+kolor logo
