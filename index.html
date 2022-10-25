@@ -5,17 +5,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="Stylesheet" href="style.css">
+
+        <script src="main.js"></script>
     </head>
     <body>
         <header>
             <h1>
-                <img src="img/logos.png" alt="logotyp svg">
+                <img src="svg/logo.svg" class="logo" alt="logotyp svg">
                 WIATR W ŻAGLE
             </h1>
         </header>
 
         <nav>
-            <a href="index.html" class="active">Strona główna</a>
+            <div><a href="index.html" class="active">Strona główna</a></div>
             <div class="dropdown">
                 <a class="dropbtn">Trochę doznań</a>
                 <div class="dropdown-content">
@@ -23,15 +25,16 @@
                     <a href="videos.html">Multimedia</a>
                 </div>
             </div>
-            <a href="scales.html">Skale</a>
-            <a href="contact.html">Kontakt</a>
-            <a href="main.js" class="icon" onclick="openMenu()">
+            <div><a href="licenses.html">Uprawnienia</a></div>
+            <div><a href="test.html">Przetestuj swoją wiedzę</a></div>
+            <div><a href="#bottom">Kontakt</a></div>
+            <a href="javascript:void(0)" class="icon" onclick="openMenu()">
                 <img src="icons/home_icon.png" alt="menu">
             </a>
         </nav>
 
         <main>
-            <h1>To jest moja strona o żeglarstwie</h1>
+            <h2>To jest moja strona o żeglarstwie</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Nunc id nulla at tortor blandit elementum vel vel mauris. 
@@ -93,7 +96,11 @@
         </main>
         
         <footer>
-            tutaj bedzie moja stopka
+            <span id="bottom"></span>
+            2022, Bartosz Kopania, s193169<br>
+            Strona zrealizowana na potrzeby projektu z hih i wai<br>
+            Telefon: <a htef="tel:123456789">+48 123-456-789</a><br>
+            Adres e-mail: <a href="mailto:s193169@student.pg.edu.pl">s193169@student.pg.edu.pl</a>
         </footer>
     </body>
 </html>

@@ -1,6 +1,8 @@
 function openMenu()
 {
-    var x = document.getElementById("nav");
+    var x = document.getElementsByTagName(nav);
+    console.log(x);
+    //  document.getElementById("nav");
     if (x.className === "nav") {
         x.className += " responsive";
     } else {
