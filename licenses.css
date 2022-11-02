@@ -9,17 +9,43 @@ tr,td,th{
     padding: 1vw;
 }
 
+#licenses>tbody>tr>th{
+    background-color: #87e6df;
+}
+
 td>ul{
     /* padding: 0px; */
     margin: 2vw;
+    list-style: none;
 }
 
 p{
     padding: 0.01vw;
 }
 
+div.aside_photos{
+    margin-top: 6vw;
+}
+
+
+div.aside_photos>figure>figcaption{
+    text-align: center;
+}
+
 @media screen and (max-width: 600px){
     td>ul{
         padding: 0px;
+    }
+
+    h2{
+        text-align: center;
+    }
+    
+    div.aside_photos>figure{
+        margin-left: 0;
+    }
+
+    div.aside_photos>figure>img{
+        width: 80vw;
     }
 }

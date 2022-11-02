@@ -27,6 +27,17 @@ main{
     border-left: 1px solid #2d5f68;
 }
 
+main>section{
+    display: flex;
+    gap:1rem;
+}
+
+main>*{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 2vw;
+}
+
 footer{
     padding-top: 3vw;
     padding-bottom: 3vw;
@@ -40,9 +51,6 @@ nav,footer{
 
 nav{
     padding: 0.5vw;
-    /* padding-left: 2.5vw;
-    width: 97vw;
-    overflow: auto; */
     display: grid;
     gap: 1rem;
 
@@ -68,6 +76,7 @@ nav a, .dropbtn{
     margin-left: 10px;
     text-decoration: none;
     color:#244d55;
+    width: 12vw;
 }
 
 nav a:hover {
@@ -125,11 +134,20 @@ footer{
         padding: 1vw;
     }
 
+    nav a, .dropbtn{
+        width: 30vw;
+    }
+
     .dropdown-content{
         display: block;
         margin: 0;
         background-color: #87e6df;
         box-shadow: none;
+    }
+
+    main>section{
+        display: inline-block;
+        width: 85vw;
     }
 
     footer{
