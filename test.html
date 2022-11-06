@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="Stylesheet" href="style.css">
-        <link rel="Stylesheet" href="licenses.css">
+        <link rel="Stylesheet" href="test.css">
+        <script src="test.js"></script>
 
-        <script src="main.js"></script>
     </head>
     <body>
         <header>
@@ -29,74 +29,56 @@
             <div><a href="licenses.html">Uprawnienia</a></div>
             <div><a href="test.html" class="active">Przetestuj swoją wiedzę</a></div>
             <div><a href="#bottom">Kontakt</a></div>
-            <a href="javascript:void(0)" class="icon" onclick="openMenu()">
-                <img src="icons/home_icon.png" alt="menu">
-            </a>
         </nav>
 
         <main>
-            <h2>Uprawnienia obecne w żeglarstwie</h2>
-            <p>
-                Dokumentem pozwaląjącym na kierowanie łodzi żaglowych jest patent. Jego wydawaniem w Polsce zajmuje się Polski Związek Żeglarstwa.<br>
-                Wielkość dokumentu jest identyczna jak dokument tożsamości, prawo jazdy czy elektronicza legitymacja studencka.<br>
-                Jest wykonana z plastiku, przez jest odporna za zamoczenie lub inne zniszczenia.
-            </p>
-            <p>
-                W Polsce, można też pływać na łodziach, nie potrzeba uprawnień. Jednak wiąże się to z pewnymi ograniczeniami:
-                <ul>
-                    <li>jacht żaglowy do 7.5m długości</li>
-                    <li>jacht motorowy do 10kW (13.6KM) mocy silnika</li>
-                    <li>jacht motorowy do 75kW (101.97KM) mocy silnika pod warunkiem, że prędkość maksymalna jednsotki to 15km/h (8.4kn)</li>
-                </ul>
-            </p>
-            <p>
-                By uzyskać już określone patenty należy zdać odpowiedni egzamin teoretyczny, a następnie praktyczny. Wygląda to analogicznie do zdawania na prawo jazdy w Polsce. Bez zdanej teorii nie można podejść do części praktycznej<br>
-                Ponadto należy mieć odpowiedni wiek oraz posiadać wcześniejszy stopień uprawnień. Wymagana jest też określona ilość godzin wypływanych.
-            </p>
-            <table id="licenses">
-                <tr>
-                    <th>Nazwa</th>
-                    <th>Wiek</th>
-                    <th>Ilość godzin</th>
-                    <th>Uprawnienia</th>
-                </tr>
-                <tr>
-                    <td>Żeglarz jachtowy</td>
-                    <td>14 lat</td>
-                    <td>Brak</td>
-                    <td>
-                        <ul>
-                            <li>Brak ograniczeń na wodach śródlądowych</li>
-                            <li>Na morzu-jachty do 12m długości oraz 2Mm od brzegu w ciągu dnia</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jachtowy sternik morski</td>
-                    <td>18 lat</td>
-                    <td>200</td>
-                    <td>
-                        <ul>
-                            <li>Brak ograniczeń na wodach śródlądowych</li>
-                            <li>Na morzu-jachty do 18m długości bez ograniczenia odległości od brzegu i pory dnia</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Kapitan jachtowy</td>
-                    <td>14 lat</td>
-                    <td>600</td>
-                    <td>
-                        <ul>
-                            <li>Brak ograniczeń w kierowaniu jednostek</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-            <p>
-                Do kierowania łodziami motorowymi potrzeba innych uprawnień niż na żaglówki.
-                Jednak patent jachtowego sternika morskiego oraz kapitan jachtowy zyskują uprawnienia identyczne do analogicznych patentów motorowodnych.
-            </p>
+            <section>
+                <div class="test">
+                    tutaj bedzie formularz testu wiedzy
+                </div>
+                <div class="register">
+                    <p>Zaloguj się</p>
+                    <form action="login.php" method="post">
+                        <label for="login">Login:</label>
+                        <input type="text" id="login" name="login">
+                        <br>
+                        <label for="psw">Hasło:</label>
+                        <input type="password" id="psw" name="psw">
+                        <br>
+                        <input type="submit" value="Zaloguj się">
+                    </form>
+                    <br>
+                    <button onclick="register()">Zarejestruj się</button>
+
+
+                    <p>Zarejestruj się</p>
+                    <form action="register.php" method="post">
+                        <label for="login">Login:</label>
+                        <input type="text" id="login" name="login">
+                        <br>
+                        <label for="psw">Hasło:</label>
+                        <input type="password" id="psw" name="psw">
+                        <br>
+                        <label for="psw_r">Powtórz Hasło:</label>
+                        <input type="password" id="psw_r" name="psw_r">
+                        <br>
+                        <label for="knowledge">Twój stopień:</label><br>
+                        <select id="knowledge" name="knowledge">
+                            <option value="">Jaki stopień posiadasz...</option>
+                            <option value="1">Brak</option>
+                            <option value="2">Żeglarz jachtowy</option>
+                            <option value="3">Jachtowy sternik morski</option>
+                            <option value="3">Kapitan Jachtowy</option>
+                        </select>
+                        <br>
+                        <label for="future">Czy planujesz związać sie z żeglarstwem w przyzsłości?</label>
+                        <input type="checkbox" id="future" name="future">
+                        <br>
+                        <input type="submit" value="Zaloguj się">
+                        <input type="reset" value="Od nowa">
+                    </form>
+                </div>
+            </section>
         </main>
         
         <footer>
