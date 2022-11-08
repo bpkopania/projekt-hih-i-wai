@@ -1,0 +1,18 @@
+{
+    "questionsAndAnswears":
+    [
+        {
+            "question":"pytanie testowe",
+            "answear1":"tutaj a",
+            "answear2":"tutaj b",
+            "answear3":"tutaj c"
+        },
+        {
+            "question":"pytanie testowe2",
+            "answear1":"tutaj a",
+            "answear2":"tutaj b",
+            "answear3":"tutaj c"
+        }
+    ]
+    
+}

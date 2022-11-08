@@ -1,0 +1,59 @@
+main>section{
+    display: flex;
+    /* gap:1rem; */
+}
+
+html{
+    min-height: 100%;
+}
+/* 
+body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65%;
+    width: 100%;
+} */
+
+section{
+    height: 100%;
+}
+
+main{
+    min-height: 100%;
+}
+
+/* footer{
+    position: fixed;
+    bottom: 0;
+    width: 96vw;
+} */
+
+.testWindow{
+    height: 100%;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5vw;
+}
+
+#test{
+    /* display:none; */
+    font-size: 2vw;
+}
+
+.register{
+    /* width: 20vw; */
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border-left: 1px solid #2d5f68;
+    border-right: 1px solid #2d5f68;
+}
+
+@media screen and (max-width: 600px){
+    main>section{
+        display: inline-block;
+        width: 85vw;
+    }
+}
