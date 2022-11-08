@@ -27,11 +27,6 @@ main{
     border-left: 1px solid #2d5f68;
 }
 
-main>section{
-    display: flex;
-    gap:1rem;
-}
-
 main>*{
     margin-top: 1vw;
     margin-bottom: 1vw;
@@ -43,6 +38,8 @@ footer{
     padding-bottom: 3vw;
     text-align: center;
     height: auto;
+    /* position: static;
+    bottom: 0; */
 }
 
 nav,footer{
@@ -118,12 +115,6 @@ nav a.active {
     background-color: #95d3cf;
 }
 
-footer{
-    position: static;
-    height: 4vw;
-    bottom: 0;
-}
-
 @media screen and (max-width: 600px) {
     header, footer, main{
         padding-left: 3vw;
@@ -143,11 +134,6 @@ footer{
         margin: 0;
         background-color: #87e6df;
         box-shadow: none;
-    }
-
-    main>section{
-        display: inline-block;
-        width: 85vw;
     }
 
     footer{

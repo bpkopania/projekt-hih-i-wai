@@ -8,8 +8,10 @@ video{
     transition-duration: 750ms;
 }
 
+/* .card: */
+
 .animated-grid {
-    height: 85vh;
+    /* height: 85vh; */
     /* margin-bottom: 200px; */
   
     display: grid;
@@ -22,8 +24,8 @@ video{
       'k  🌟 🌟 f'
       'j  i  h  g';
   
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr 1.5fr 2fr 1fr;
+    grid-template-rows: repeat(4, 10vw);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
   
     --stagger-delay: 100ms;
   }
@@ -103,5 +105,17 @@ video{
 @media screen and (max-width: 600px) {
     video{
         width: 85vw;
+    }
+
+    .animated-grid{
+      display: block;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+    }
+
+    .animated-grid>*{
+      margin-top: 1vw;
+      width: 85vw;
+      height: 56vw;
     }
 }

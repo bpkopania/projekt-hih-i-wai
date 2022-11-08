@@ -1,3 +1,8 @@
+main>section{
+    display: flex;
+    gap:1rem;
+}
+
 #licenses{
     border: 1px solid #2d5f68;
     text-align: center;
@@ -14,7 +19,6 @@ tr,td,th{
 }
 
 td>ul{
-    /* padding: 0px; */
     margin: 2vw;
     list-style: none;
 }
@@ -33,6 +37,11 @@ div.aside_photos>figure>figcaption{
 }
 
 @media screen and (max-width: 600px){
+    main>section{
+        display: inline-block;
+        width: 85vw;
+    }
+
     td>ul{
         padding: 0px;
     }
