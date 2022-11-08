@@ -5,13 +5,15 @@
             "question":"pytanie testowe",
             "answear1":"tutaj a",
             "answear2":"tutaj b",
-            "answear3":"tutaj c"
+            "answear3":"tutaj c",
+            "correct":"1"
         },
         {
             "question":"pytanie testowe2",
             "answear1":"tutaj a",
             "answear2":"tutaj b",
-            "answear3":"tutaj c"
+            "answear3":"tutaj c",
+            "correct":"2"
         }
     ]
     

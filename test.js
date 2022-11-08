@@ -1,11 +1,23 @@
-function register(){
-    
+async function getJSON(){
+    questionsAnswears = await (await fetch("./qa.json")).json();
 }
 
+$( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+    });
+});
+
+$( function() {
+    $( '#pws' ).tooltip();
+  } );
+
 function startTest(){
-    var startButton = document.getElementById("startTestBtn");
+    dialogBox.innerHTML = "Aby test był zdany musisz odpowiedzieć na 7 z 10 pytań.<br>Powodzenia!!!";
+    dialogBox.title = "Wymogi";
+    $( "#dialog" ).dialog( "open" );
     startButton.style.display="none";
-    //parse to json from json file //TODO
+    test.style.display="block";
     questionEnumerator=document.getElementById("enumeration");
     question=document.getElementById("question");
     answear1=document.getElementById("answ1");
@@ -14,18 +26,49 @@ function startTest(){
     nextQuestion();
 }
 
+function checkQuestion(){
+    let correct = questionsAnswears.questionsAndAnswears[sessionStorage.numberOfQuesion-1].correct;
+    if(correct==1 && answear1.value){
+        //TODO
+    }
+}
+
 function nextQuestion(){
-    numberOfQuesion++;
-    console.log(numberOfQuesion);
-    questionEnumerator.innerHTML="Pytanie nr " + numberOfQuesion;
-    question.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].question;           //"tutaj bedzie pytanie nr " + numberOfQuesion; //TODO
-    answear1.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear1;             //"a) " + "tutaj odpowiedz a";
-    answear2.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear2;             //"b) " + "tutaj odpowiedz b";
-    answear3.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear3;             //"c) " + "tutaj odpowiedz c";  
+    //TODO
+    //check question
+    if(sessionStorage.numberOfQuesion<10)
+    {
+        sessionStorage.numberOfQuesion++;
+        let numberOfQuesion=sessionStorage.numberOfQuesion;
+        questionEnumerator.innerHTML="Pytanie nr " + numberOfQuesion;
+        answear1.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear1;
+        answear2.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear2;
+        question.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].question;
+        answear3.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear3;
+    }
+    else
+    {
+        finishTest();
+    }
 }
 
 function finishTest(){
-    console.log(questionsAnswears.questionsAndAnswears[0].question);
+    localStorage.numberOfMadeTests++;
+    dialogBox.title="Wyniki Testu";
+    if(sessionStorage.numerOfCorrectAnswears>=7)
+    {
+        localStorage.numberOfPassedTests++;
+        dialogBox.innerHTML = "Brawo!!!<br>Test zdany. Twój wynik to:<br>"+sessionStorage.numerOfCorrectAnswears+"/"+sessionStorage.numberOfQuesion;
+    }
+    else
+    {
+        dialogBox.innerHTML = "Niestety, tym razem się nie udało.<br>Twój wynik to:<br>"+sessionStorage.numerOfCorrectAnswears+"/"+sessionStorage.numberOfQuesion;
+    }
+    $( "#dialog" ).dialog( "open" );
+    sessionStorage.numberOfQuesion=0;
+    sessionStorage.numerOfCorrectAnswears=0;
+    test.style.display="none";
+    startButton.style.display="block";
     showProgress();
 }
 
@@ -33,22 +76,27 @@ function showProgress(){
     stats.innerHTML=localStorage.numberOfPassedTests+"\\"+localStorage.numberOfMadeTests;
     if(localStorage.numberOfMadeTests!=0)
     {
-        stats.innerHTML=score.innerHTML+"<br>"+localStorage.numberOfPassedTests/localStorage.numberOfMadeTests+"%";
+        stats.innerHTML=score.innerHTML+"<br>"+ localStorage.numberOfPassedTests/localStorage.numberOfMadeTests*100+"%";
     }
+}
+
+function mistake(){
     
 }
 
-var questionEnumerator;
-var question;
-var answear1;
-var answear2;
-var answear3;
-var numberOfQuesion=0;
+let questionsAnswears;
+let questionEnumerator;
+let question;
+let answear1;
+let answear2;
+let answear3;
 
-var stats=document.getElementById("score");
+let stats=document.getElementById("score");
+let test=document.getElementById("test");
+let startButton = document.getElementById("startTestBtn");
+let dialogBox=document.getElementById("dialogBoxText");
 
-console.log(stats);
-
+getJSON()
 
 if(window.localStorage){
     if(!localStorage.numberOfMadeTests)
@@ -59,49 +107,11 @@ if(window.localStorage){
     showProgress();
 }
 
-// var questionsAnswears={
-//     "questionsAndAnswears":
-//     [
-//         {
-//             "question":"pytanie testowe",
-//             "answear1":"tutaj a",
-//             "answear2":"tutaj b",
-//             "acorrect":"tutaj c"
-//         },
-//         {
-//             "question":"pytanie testowe",
-//             "answear1":"tutaj a",
-//             "answear2":"tutaj b",
-//             "acorrect":"tutaj c"
-//         }
-//     ]
-    
-// };
-
-// import questionsAnswears from './qa.json' assert{ type:'JSON'};
-
-// let questionsAnswears = (await fetch("./qa.json")).json();
-
-let questionsAnswears
-
-async function gett(){
-    questionsAnswears = await (await fetch("./qa.json")).json();
+if(window.sessionStorage)
+{
+    if(!sessionStorage.numberOfQuesion)
+    {
+        sessionStorage.numberOfQuesion=0;
+        sessionStorage.numerOfCorrectAnswears=0;
+    }
 }
-
-gett();
-
-
-
-// var questionsAnswears;
-// fetch("./qa.json")
-// .then(async (response) => questionsAnswears = await response.json());
-
-
-// setTimeout(() => {
-//     console.log(questionsAnswears);    
-// }, 1000);
-// require('./qa.json');
-
-// console.log(null == 0);
-// console.log(null > 0);
-// console.log(null >= 0);

@@ -4,10 +4,16 @@
         <title>wiatr w żagle</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="Stylesheet" href="style.css">
         <link rel="Stylesheet" href="test.css">
         <script src="test.js" defer></script>
-        <!-- <script src="qa.json"></script> -->
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
     </head>
     <body>
@@ -39,18 +45,24 @@
                     <div id="test">
                         <strong><p id="enumeration">Pytanie nr 0</p>
                         <p id="question">Pytanie brzmi następująco</p></strong>
-                        <input type="radio" id="aCheckBox" name="answ" value="0">
+                        <input type="radio" id="aCheckBox" name="answ" value="1">
                         <label id="answ1" for="a">a) tutaj jest odpowiedz a</label>
                         <br>
-                        <input type="radio" id="bCheckBox" name="answ" value="1">
+                        <input type="radio" id="bCheckBox" name="answ" value="2">
                         <label id="answ2" for="b">b) tutaj jest odpowiedz b</label>
                         <br>
-                        <input type="radio" id="cCheckBox" name="answ" value="2">
+                        <input type="radio" id="cCheckBox" name="answ" value="3">
                         <label id="answ3" for="c">c) tutaj jest odpowiedz c</label>
                         <br>
                         <button id="check" onclick="nextQuestion()">Następne</button>
                         <button id="finish" onclick="finishTest()">Zakończ</button>
+                        <br>
+                        <button id="finish" onclick="mistake()">Zgłoś błąd</button>
                     </div>
+
+                    <div id="dialog" title="dialog">
+                        <p id="dialogBoxText">teskt dla dialogBox</p>
+                     </div>
 
                 </div>
                 <div class="register">
@@ -61,19 +73,18 @@
                             XX%
                         </p>
                     </div>
-                    <br>
                     <p>Zaloguj się</p>
                     <form action="login.php" method="post">
                         <label for="login">Login:</label>
-                        <input type="text" id="login" name="login">
+                        <input type="text" id="loginLogin" name="loginLogin">
                         <br>
                         <label for="psw">Hasło:</label>
-                        <input type="password" id="psw" name="psw">
+                        <input type="password" id="pswLogin" name="pswLogin">
                         <br>
                         <input type="submit" value="Zaloguj się">
                     </form>
-                    <br>
-                    <button onclick="register()">Zarejestruj się</button>
+                    <!-- <br> -->
+                    <!-- <button onclick="register()">Zarejestruj się</button> -->
 
 
                     <p>Zarejestruj się</p>
@@ -82,7 +93,7 @@
                         <input type="text" id="login" name="login">
                         <br>
                         <label for="psw">Hasło:</label>
-                        <input type="password" id="psw" name="psw">
+                        <input type="password" id="psw" name="psw" title="Hasło musi zawierać 8 znaków, w tym dużą i małą literę, cyfrę oraz znak specjlany">
                         <br>
                         <label for="psw_r">Powtórz Hasło:</label>
                         <input type="password" id="psw_r" name="psw_r">

@@ -39,7 +39,7 @@ main{
 }
 
 #test{
-    /* display:none; */
+    display:none;
     font-size: 2vw;
 }
 
