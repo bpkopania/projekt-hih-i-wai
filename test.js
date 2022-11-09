@@ -10,7 +10,7 @@ $( function() {
 
 $( function() {
     $( '#pws' ).tooltip();
-  } );
+});
 
 function startTest(){
     dialogBox.innerHTML = "Aby test był zdany musisz odpowiedzieć na 7 z 10 pytań.<br>Powodzenia!!!";
@@ -75,6 +75,7 @@ function finishTest(){
     sessionStorage.numerOfCorrectAnswears=0;
     test.style.display="none";
     startButton.style.display="block";
+    //TOFIX center a btn after finish
     showProgress();
 }
 
@@ -87,8 +88,11 @@ function showProgress(){
 }
 
 function mistake(){
-    //TODO
-    //create child of div id=test
+    var tag=document.createElement("p");
+    var text = document.createTextNode("Aby zgłosić błąd, musisz być zalogowany.");
+    tag.appendChild(text);
+    var element = document.getElementById("testWindow");
+    element.append(tag);
 }
 
 let questionsAnswears;
@@ -102,6 +106,8 @@ let stats=document.getElementById("score");
 let test=document.getElementById("test");
 let startButton = document.getElementById("startTestBtn");
 let dialogBox=document.getElementById("dialogBoxText");
+
+document.getElementById("noscript").style.visibility = "visible";
 
 getJSON()
 

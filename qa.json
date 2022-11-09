@@ -2,18 +2,74 @@
     "questionsAndAnswears":
     [
         {
-            "question":"pytanie testowe",
-            "answear1":"tutaj a",
-            "answear2":"tutaj b",
-            "answear3":"tutaj c",
+            "question":"Lewe światło burtowe ma kolor:",
+            "answear1":"czerwony",
+            "answear2":"biały",
+            "answear3":"zielony",
             "correct":"1"
         },
         {
-            "question":"pytanie testowe2",
-            "answear1":"tutaj a",
-            "answear2":"tutaj b",
-            "answear3":"tutaj c",
+            "question":"Wanta to",
+            "answear1":"część żagla",
+            "answear2":"lina utrzymująca msazt od strony burty",
+            "answear3":"lina służąca do podnoszenia żagla",
             "correct":"2"
+        },
+        {
+            "question":"Fał to",
+            "answear1":"lina służąca do stawiania żagli",
+            "answear2":"lina utrzymująca maszt",
+            "answear3":"część bomu",
+            "correct":"1"
+        },
+        {
+            "question":"Wiatr określany w ogólnych prognozach pogody jako \"sztorm\", to wiatr o sile:",
+            "answear1":"6",
+            "answear2":"7",
+            "answear3":"8",
+            "correct":"3"
+        },
+        {
+            "question":"Z chmurą Cumulonimbus związane są:",
+            "answear1":"wiatr halny",
+            "answear2":"zjawisko bryzy",
+            "answear3":"porywiste i silne wiatry",
+            "correct":"3"
+        },
+        {
+            "question":"Zjawisku dyszy na akwenie wodnym z reguły towarzyszy:",
+            "answear1":"intensywny opad deszczu",
+            "answear2":"nagły wzrost siły wiatru",
+            "answear3":"wyładowania atmosferyczne",
+            "correct":"2"
+        },
+        {
+            "question":"Ustawienie żagli \"na motyla\" w fordewindzie na jachcie typu slup umożliwia:",
+            "answear1":"wzajemne zakłócanie pracy żagli",
+            "answear2":"poprawną pracę obu żagli",
+            "answear3":"osiągnięcie trwałego zrównoważenia żaglowego",
+            "correct":"2"
+        },
+        {
+            "question":"Duży przechył jachtu po gwałtownym wyłożeniu steru na burtę podczas żeglugi spowodowany jest działaniem:",
+            "answear1":"siły dryfu",
+            "answear2":"siły odśrodkowej",
+            "answear3":"siły oporu",
+            "correct":"2"
+        },
+        {
+            "question":"Baksztag to kurs względem wiatru przy kierunku wyczuwanym:",
+            "answear1":"od rufy jachtu do trawersu",
+            "answear2":"prostopadle do burty",
+            "answear3":"od dziobu",
+            "correct":"1"
+        },
+        {
+            "question":"Długi dźwięk, to dźwięk trwający około:",
+            "answear1":"6 sekund",
+            "answear2":"1 sekundę",
+            "answear3":"4 sekundy",
+            "correct":"3"
         }
     ]
     

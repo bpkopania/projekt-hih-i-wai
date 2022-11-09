@@ -1,46 +1,26 @@
 main>section{
     display: flex;
-    /* gap:1rem; */
 }
 
-html{
-    min-height: 100%;
-}
-/* 
-body{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 65%;
-    width: 100%;
-} */
-
-section{
-    height: 100%;
+#noscript{
+    visibility: hidden;
 }
 
-main{
-    min-height: 100%;
-}
-
-/* footer{
-    position: fixed;
-    bottom: 0;
-    width: 96vw;
-} */
-
-.testWindow{
-    height: 100%;
-    float: left;
+#testWindow{
+    display: flex;
+    height: 65vh;
     text-align: center;
     justify-content: center;
     align-items: center;
     padding-right: 5vw;
+    width: 70vw;
 }
 
 #test{
     display:none;
     font-size: 2vw;
+    /* height: 90%; */
+    width: 100%;
 }
 
 .register{
