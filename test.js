@@ -23,21 +23,20 @@ function startTest(){
     answear1=document.getElementById("answ1");
     answear2=document.getElementById("answ2");
     answear3=document.getElementById("answ3");
-    nextQuestion();
+    setNextQuestion();
 }
 
 function checkQuestion(){
     let correct = questionsAnswears.questionsAndAnswears[sessionStorage.numberOfQuesion-1].correct;
-    if(correct==1 && answear1.value){
-        //TODO
+    let choosen = document.querySelector('input[name="answ"]:checked');
+    if(correct == choosen.value)
+    {
+        sessionStorage.numerOfCorrectAnswears++;
     }
+    choosen.checked=false;
 }
 
-function nextQuestion(){
-    //TODO
-    //check question
-    if(sessionStorage.numberOfQuesion<10)
-    {
+function setNextQuestion(){
         sessionStorage.numberOfQuesion++;
         let numberOfQuesion=sessionStorage.numberOfQuesion;
         questionEnumerator.innerHTML="Pytanie nr " + numberOfQuesion;
@@ -45,6 +44,13 @@ function nextQuestion(){
         answear2.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear2;
         question.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].question;
         answear3.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear3;
+}
+
+function nextQuestion(){
+    checkQuestion()
+    if(sessionStorage.numberOfQuesion<10)
+    {
+        setNextQuestion();
     }
     else
     {
@@ -81,7 +87,8 @@ function showProgress(){
 }
 
 function mistake(){
-    
+    //TODO
+    //create child of div id=test
 }
 
 let questionsAnswears;
