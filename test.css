@@ -24,16 +24,37 @@ main>section{
 }
 
 .register{
-    /* width: 20vw; */
+    text-align: center;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     border-left: 1px solid #2d5f68;
     border-right: 1px solid #2d5f68;
 }
 
+.stats{
+    font-size: 2vw;
+}
+
+/* #aCheckBox, #bCheckBox, #cCheckBox{
+    width: 100px
+}
+
+#test>label{
+    padding-left: -50px;
+} */
+
 @media screen and (max-width: 600px){
     main>section{
         display: inline-block;
         width: 85vw;
+    }
+
+    #testWindow{
+        width: 85vw;
+        height: auto;
+    }
+
+    #test, .stats{
+        font-size: 20px;
     }
 }

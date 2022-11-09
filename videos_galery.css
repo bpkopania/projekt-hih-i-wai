@@ -8,6 +8,11 @@ video{
     transition-duration: 750ms;
 }
 
+img{
+  height: 100%;
+  width: 100%;
+}
+
 /* .card: */
 
 .animated-grid {
