@@ -7,6 +7,9 @@
         <link rel="Stylesheet" href="style.css">
         <link rel="Stylesheet" href="videos_galery.css">
 
+        <script src="OriDomi/oridomi.min.js"></script>
+        <!-- jQuery plugin comes from http://oridomi.com/ -->
+
     </head>
     <body>
         <header>
@@ -32,10 +35,12 @@
         </nav>
 
         <main>
-            <h2>Rejs Żaglowcem STS - Fryderyk Chopin</h2>
-            <video controls>
-                <source src="video/Rejs Żaglowcem Fryderyk Chopin.mp4" type="video/mp4">
-            </video>
+            <div>
+                <h2>Rejs Żaglowcem STS - Fryderyk Chopin</h2>
+                <video controls>
+                    <source src="video/Rejs Żaglowcem Fryderyk Chopin.mp4" type="video/mp4">
+                </video>
+            </div>
         </main>
         
         <footer>
@@ -45,5 +50,20 @@
             Telefon: <a href="tel:123456789">+48 123-456-789</a><br>
             Adres e-mail: <a href="mailto:s193169@student.pg.edu.pl">s193169@student.pg.edu.pl</a>
         </footer>
+
+        <script>
+            var video1 = new OriDomi(document.getElementById("bottom"),
+            {
+                vPanels:          5,     // number of panels when folding left or right (vertically oriented)
+                hPanels:          3,     // number of panels when folding top or bottom
+                speed:            1200,  // folding duration in ms
+                ripple:           5,     // backwards ripple effect when animating
+                shadingIntensity: .5,    // lessen the shading effect
+                perspective:      1000,   // smaller values exaggerate 3D distortion
+                maxAngle:         90,    // keep the user's folds within a range of -40 to 40 degrees
+                shading:          'soft' // change the shading type
+            });
+            video1.reveal(0);
+        </script>
     </body>
 </html>
