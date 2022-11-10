@@ -35,7 +35,8 @@
         </nav>
 
         <main>
-            <div>
+            <h2 id="fold">Filmy obrazujące życie na żaglowcach</h2>
+            <div id="video1">
                 <h2>Rejs Żaglowcem STS - Fryderyk Chopin</h2>
                 <video controls>
                     <source src="video/Rejs Żaglowcem Fryderyk Chopin.mp4" type="video/mp4">
@@ -52,10 +53,10 @@
         </footer>
 
         <script>
-            var video1 = new OriDomi(document.getElementById("bottom"),
+            var fold = new OriDomi(document.getElementById("fold"),
             {
-                vPanels:          5,     // number of panels when folding left or right (vertically oriented)
-                hPanels:          3,     // number of panels when folding top or bottom
+                vPanels:          10,     // number of panels when folding left or right (vertically oriented)
+                // hPanels:          3,     // number of panels when folding top or bottom
                 speed:            1200,  // folding duration in ms
                 ripple:           5,     // backwards ripple effect when animating
                 shadingIntensity: .5,    // lessen the shading effect
@@ -63,7 +64,7 @@
                 maxAngle:         90,    // keep the user's folds within a range of -40 to 40 degrees
                 shading:          'soft' // change the shading type
             });
-            video1.reveal(0);
+            fold.accordion(20);
         </script>
     </body>
 </html>
