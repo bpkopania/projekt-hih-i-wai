@@ -5,6 +5,10 @@ body{
     text-align: justify;
 }
 
+h1{
+    font-size: 30px;
+}
+
 header{
     text-align: center;
 }
@@ -26,6 +30,7 @@ main{
     padding-left:  1vw;
     padding-right: 1vw;
     border-left: 1px solid #2d5f68;
+    font-size: 20px;
 }
 
 main>*{
@@ -114,6 +119,11 @@ nav a.active {
   
 .dropdown:hover .dropbtn {
     background-color: #95d3cf;
+}
+
+figcaption{
+    font-size: 15px;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px) {

@@ -11,7 +11,7 @@
         {
             "question":"Wanta to",
             "answear1":"część żagla",
-            "answear2":"lina utrzymująca msazt od strony burty",
+            "answear2":"lina utrzymująca maszt od strony burty",
             "answear3":"lina służąca do podnoszenia żagla",
             "correct":"2"
         },
@@ -71,6 +71,5 @@
             "answear3":"4 sekundy",
             "correct":"3"
         }
-    ]
-    
+    ]   
 }

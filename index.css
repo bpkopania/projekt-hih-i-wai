@@ -1,3 +1,39 @@
-.content{
-    width: 60vw;
+main>section{
+    width: 90vw;
+    display: flex;
+    gap:1rem;
+}
+
+figure{
+    width: 20vw;
+}
+
+img{
+    width:100%;
+}
+
+/*.content{
+    width: 50vw;
+    font-size: 25px;
+} */
+
+.aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px){
+    main>section{
+        display: inline-block;
+        width: 85vw;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    figure{
+        width: 85vw;
+    }
 }

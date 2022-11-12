@@ -47,9 +47,9 @@ function setNextQuestion(){
 }
 
 function nextQuestion(){
-    checkQuestion()
     if(sessionStorage.numberOfQuesion<10)
     {
+        checkQuestion();
         setNextQuestion();
     }
     else
@@ -59,6 +59,7 @@ function nextQuestion(){
 }
 
 function finishTest(){
+    checkQuestion();
     localStorage.numberOfMadeTests++;
     dialogBox.title="Wyniki Testu";
     if(sessionStorage.numerOfCorrectAnswears>=7)
@@ -75,7 +76,6 @@ function finishTest(){
     sessionStorage.numerOfCorrectAnswears=0;
     test.style.display="none";
     startButton.style.display="block";
-    //TOFIX center a btn after finish
     showProgress();
 }
 
