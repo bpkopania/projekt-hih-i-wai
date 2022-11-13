@@ -35,14 +35,6 @@ main>section{
     font-size: 2vw;
 }
 
-/* #aCheckBox, #bCheckBox, #cCheckBox{
-    width: 100px
-}
-
-#test>label{
-    padding-left: -50px;
-} */
-
 @media screen and (max-width: 600px){
     main>section{
         display: inline-block;
