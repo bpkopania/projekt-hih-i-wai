@@ -13,7 +13,7 @@ $( function() {
 });
 
 function startTest(){
-    dialogBox.innerHTML = "Aby test był zdany musisz odpowiedzieć na 7 z 10 pytań.<br>Powodzenia!!!";
+    dialogBox.innerHTML = "Aby zdać test musisz prawidłowo odpowiedzieć na 7 z 10 pytań.<br>Powodzenia!!!";
     dialogBox.title = "Wymogi";
     $( "#dialog" ).dialog( "open" );
     startButton.style.display="none";
@@ -38,6 +38,7 @@ function checkQuestion(){
 
 function setNextQuestion(){
         sessionStorage.numberOfQuesion++;
+        foundMistake = false;
         let numberOfQuesion=sessionStorage.numberOfQuesion;
         questionEnumerator.innerHTML="Pytanie nr " + numberOfQuesion;
         answear1.innerHTML=questionsAnswears.questionsAndAnswears[numberOfQuesion-1].answear1;
@@ -55,6 +56,10 @@ function nextQuestion(){
     else
     {
         finishTest();
+    }
+    if(document.getElementById("mistake"))
+    {
+        document.getElementById("mistake").remove();
     }
 }
 
@@ -77,6 +82,10 @@ function finishTest(){
     test.style.display="none";
     startButton.style.display="block";
     showProgress();
+    if(document.getElementById("mistake"))
+    {
+        document.getElementById("mistake").remove();
+    }
 }
 
 function showProgress(){
@@ -88,11 +97,16 @@ function showProgress(){
 }
 
 function mistake(){
-    var tag=document.createElement("p");
-    var text = document.createTextNode("Aby zgłosić błąd, musisz być zalogowany.");
-    tag.appendChild(text);
-    var element = document.getElementById("testWindow");
-    element.append(tag);
+    if(!foundMistake)
+    {
+        let para=document.createElement("p");
+        para.setAttribute("id","mistake");
+        let text = document.createTextNode("Aby zgłosić błąd, musisz być zalogowany.");
+        para.appendChild(text);
+        let element = document.getElementById("testWindow");
+        element.append(para);
+        foundMistake = true;
+    }
 }
 
 let questionsAnswears;
@@ -101,6 +115,7 @@ let question;
 let answear1;
 let answear2;
 let answear3;
+let foundMistake=false;
 
 let stats=document.getElementById("score");
 let test=document.getElementById("test");
