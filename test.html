@@ -44,21 +44,21 @@
                 <div id="testWindow">
                     <button id="startTestBtn" onclick="startTest()">Rozpocznij test</button>
                     <div id="test">
-                        <strong><p id="enumeration">Pytanie nr 0</p>
-                        <p id="question">Pytanie brzmi następująco</p></strong>
+                        <p id="enumeration"><strong>Pytanie nr 0</strong></p>
+                        <p id="question"><strong>Pytanie brzmi następująco</strong></p>
                         <input type="radio" id="aCheckBox" name="answ" value="1">
-                        <label id="answ1" for="a">a) tutaj jest odpowiedz a</label>
+                        <label id="answ1" for="aCheckBox">a) tutaj jest odpowiedz a</label>
                         <br>
                         <input type="radio" id="bCheckBox" name="answ" value="2">
-                        <label id="answ2" for="b">b) tutaj jest odpowiedz b</label>
+                        <label id="answ2" for="bCheckBox">b) tutaj jest odpowiedz b</label>
                         <br>
                         <input type="radio" id="cCheckBox" name="answ" value="3">
-                        <label id="answ3" for="c">c) tutaj jest odpowiedz c</label>
+                        <label id="answ3" for="cCheckBox">c) tutaj jest odpowiedz c</label>
                         <br>
                         <button id="check" onclick="nextQuestion()">Następne</button>
                         <button id="finish" onclick="finishTest()">Zakończ</button>
                         <br>
-                        <button id="finish" onclick="mistake()">Zgłoś błąd</button>
+                        <button id="mistake" onclick="mistake()">Zgłoś błąd</button>
                     </div>
 
                     <div id="dialog" title="dialog">
