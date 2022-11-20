@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+  <xs:element name="sailing">
+    <xs:complexType>
+      <xs:sequence>
+        
+        
+        <xs:element name ="history">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="historyEra" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="title" type="longStringType"/>
+                    <xs:element name="descryption" type="xs:string"/>
+                    <xs:element ref="asidePhoto" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="shortStringType"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!--GlobalTypes-->
+
+  <xs:simpleType name="shortStringType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="longStringType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="70"/>
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="imageType">
+    <xs:simpleContent>
+      <xs:extension base="shortStringType">
+        <xs:attribute name="src" type="xs:anyURI"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="asidePhotoType">
+    <xs:sequence>
+      <xs:element name="image" type="imageType"/>
+      <xs:element name="description" type="longStringType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!--globbalne elementy-->
+
+  <xs:element name="asidePhoto" type="asidePhotoType"/>
+  
+</xs:schema>
