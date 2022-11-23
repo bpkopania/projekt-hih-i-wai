@@ -98,7 +98,24 @@
   </xs:simpleType>
   
   <xs:simpleType name="contactType">
-    <xs:list itemType="xs:string"/>
+    <xs:list>
+      <xs:simpleType>
+        <xs:union memberTypes="phoneNumberType emailType"/>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+
+  <xs:simpleType name="phoneNumberType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="9"/>
+      <xs:maxLength value="16"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="emailType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z]+[0-9]+@([a-zA-Z]+(\.[a-zA-Z]+)+)"/>
+    </xs:restriction>
   </xs:simpleType>
   
     <xs:simpleType name="yesno">
