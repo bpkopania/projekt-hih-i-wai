@@ -14,7 +14,13 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="title" type="longStringType"/>
-                    <xs:element name="descryption" type="xs:string"/>
+                    <xs:element name="descryption">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="80"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                     <xs:element ref="asidePhoto" minOccurs="0"/>
                   </xs:sequence>
                   <xs:attribute ref="name"/>
@@ -88,13 +94,6 @@
     <xs:restriction base="xs:string">
       <xs:maxLength value="70"/>
       <xs:minLength value="1"/>
-    </xs:restriction>
-  </xs:simpleType>
-  
-  <xs:simpleType name="ageType">
-    <xs:restriction base="xs:integer">
-      <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="120"/>
     </xs:restriction>
   </xs:simpleType>
   
@@ -175,7 +174,14 @@
   
   <xs:complexType name="licenseType">
     <xs:sequence>
-      <xs:element name="age" type="ageType"/>
+      <xs:element name="age">
+        <xs:simpleType>
+         <xs:restriction base="xs:integer">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="120"/>
+         </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="hours"/>
       <xs:element name="qualification" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
