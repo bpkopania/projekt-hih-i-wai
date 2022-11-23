@@ -132,4 +132,19 @@
   <contact>
     +48-123-456-789 +48-59-51-57-987 s193169@student.pg.edu.pl
   </contact>
+
+  <questionAndAnswears>
+    <question number="1" base="yes">
+      Lewe światło burtowe ma kolor:
+      <answear correct="yes">
+        czerwony
+      </answear>
+      <answear correct="no">
+        czerwony
+      </answear>
+      <answear correct="no">
+        czerwony
+      </answear>
+    </question>
+  </questionAndAnswears>
 </sailing>

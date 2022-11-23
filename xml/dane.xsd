@@ -45,18 +45,21 @@
                 </xs:complexType>
               </xs:element>
 
-              <xs:element name="typesOfLicenses">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="license" type="licenseType" minOccurs="0" maxOccurs="unbounded"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
+              <xs:element name="typesOfLicenses" type="licenseListType" />
+              
             </xs:sequence>
           </xs:complexType>
         </xs:element>
 
         <xs:element name="contact" type="contactType"/>
+
+        <xs:element name="questionAndAnswears">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="question" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         
       </xs:sequence>
     </xs:complexType>
@@ -107,6 +110,12 @@
       <xs:maxInclusive value="120"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:complexType name="licenseListType">
+    <xs:sequence>
+      <xs:element name="license" type="licenseType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
   
   <xs:complexType name="licenseType">
     <xs:sequence>
@@ -120,9 +129,36 @@
   <xs:simpleType name="contactType">
     <xs:list itemType="xs:string"/>
   </xs:simpleType>
+
+  <xs:complexType name="answearType">
+    <xs:simpleContent>
+      <xs:extension base="shortStringType">
+        <xs:attribute ref="correct"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="yesno">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes"/>
+      <xs:enumeration value="no"/>
+    </xs:restriction>
+  </xs:simpleType>
   
   <!--globbalne elementy-->
 
   <xs:element name="asidePhoto" type="asidePhotoType"/>
+
+  <xs:element name="question">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="answear" type="answearType" minOccurs="3" maxOccurs="3"/>
+      </xs:sequence>
+      <xs:attribute name="number" type="xs:integer"/>
+      <xs:attribute name="base" type="yesno"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:attribute name="correct" type="yesno"/>
   
 </xs:schema>
