@@ -1,0 +1,48 @@
+<!ELEMENT sailing (author,history,sense,licenses,contact,questionAndAnswears,famousSailor)>
+
+<!ENTITY % source "src CDATA #REQUIRED">
+<!ENTITY % yesnoType "(yes|no) 'yes'">
+
+<!ELEMENT author (name,surname,id)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+
+<!ELEMENT history (historyEra*)>
+<!ELEMENT historyEra (title,description,asidePhoto*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT asidePhoto (image,description)>
+<!ELEMENT image (#PCDATA)>
+
+<!ELEMENT sense (image*,video*)>
+<!ELEMENT video (#PCDATA)>
+
+<!ELEMENT licenses (howto|typesOfLicenses)*>
+<!ELEMENT howto (description|asidePhoto)*>
+<!ELEMENT typesOfLicenses (license*)>
+<!ELEMENT license (age,hours,qualification*)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT hours (#PCDATA)>
+<!ELEMENT qualification (#PCDATA)>
+
+<!ELEMENT contact (#PCDATA)>
+
+<!ELEMENT questionAndAnswears (question*)>
+<!ELEMENT question (#PCDATA|answear)*>
+<!ELEMENT answear (#PCDATA)>
+
+<!ELEMENT famousSailor (sailor*)>
+<!ELEMENT sailor (name,surname,about)>
+<!ELEMENT about (#PCDATA)>
+
+<!ATTLIST historyEra name CDATA #IMPLIED>
+<!ATTLIST image %source;>
+<!ATTLIST video %source;>
+<!ATTLIST license name CDATA #IMPLIED>
+<!ATTLIST questionAndAnswears version CDATA "1.00.000">
+<!ATTLIST question number CDATA #REQUIRED>
+<!ATTLIST question dataBase %yesnoType;>
+<!ATTLIST answear correct (yes|no) "no">
+<!ATTLIST sailor alive %yesnoType;>
+
