@@ -10,19 +10,19 @@
   <history>
     <historyEra name="Introduction">
       <title>Żeglarstwo oraz jego krótka historia</title>
-      <descryption>
+      <description>
         Ludzie od zarania dziejów są chłonni poznawania świata. Jednak wody morskie i oceaniczne były dla nich wielką przeszkodą. Początkowo siłą własnych mięśni pokonywali akweny. Czy to wpław czy przy użyciu łodzi z wiosłami.
         Z czasem zamontowano na masztach żagiel. Od tamtej pory ludzie dużo łatwiej poruszali się po wodach. Umożliwiło to spływ zbóż czy materiałów budowalnych rzekami lub innymi akwenami.
-      </descryption>
+      </description>
     </historyEra>
     <historyEra name="Ancient">
       <title>Starożytna Grecja i Rzym</title>
-      <descryption>
+      <description>
         Wraz z rozwojem cywilizacji statki zaczęły rosnąć oraz zaczęto wymyślać nowe typy ożaglowania. W Starożytnej Grecji, Rzymie oraz Egipcie żaglowce były używane do handlu na terenie Morza Śródziemnego.
         Ale nie tylko...
         Ludzie wykorzystali statki także do walki. Narody zaczęły ze sobą walczyć teraz także na morzach, wykorzystali je do transportu wojsk na teren walk, chociażby tak jak Grecy pod Troję czy Persowie podczas ataku na Grecję.
         Własnie w tamtym okresie powstała większość znanych nam do dzisiaj typów żagli.
-      </descryption>
+      </description>
       <asidePhoto>
         <image src="/img/trireme.jpg">Triera</image>
         <description>Triera - grecki statek wojenny</description>
@@ -30,12 +30,12 @@
     </historyEra>
     <historyEra name="Discovery era">
       <title>Początek ery wielkich odkryć geograficznych</title>
-      <descryption>
+      <description>
         Kraje półwyspu Iberyjskiego potrzebowały odpowiedzi co znajduje się za ich bezkresem oceanu - tak jak inne morza mają jakiś ląd po drugiej stronie tak też i oni zakładali, że za oceanem kryje się jakiś ląd.
         Początkowo zakładali, że znajdą tam Indie - czyli opłyną cały świat.
         Specjalnie do tego zadania przygotowywali swoje statki, w ten sposób powstała karawela. Łączyła ona zalety obu wówczas najpopularniejszych typów statków. Żagle prostokątne i trójkątne zwiększały prędkość statku, nie ograniczając go do kieruku wiatru. Drugim elementem jest ster centralny - zapewnia on żaglowcowi duża stabilność
         W 1492 r. Krzysztof Kolumb wraz z Amerigo Vespuccim odkryli nowy ląd. Załozyli, że to własnie Indie, wiec nazwali miejscową ludność Indianami. Jednak jakiś czas później Amerigo dowiódł, że to nowy kontynent - Nowy Świat, na jego cześć nazwany Ameryką.
-      </descryption>
+      </description>
       <asidePhoto>
         <image src="/img/santa_maria.jpg">Karawela</image>
         <description>Karawela Santa Maria</description>
@@ -43,10 +43,10 @@
     </historyEra>
     <historyEra name="Trade Era">
       <title>Panowanie Europy nad całym światem</title>
-      <descryption>
+      <description>
         Wraz ze wzorstem potęgi państw statego kontynentu, rosło zapotrzebowanie na handel morski z koloniami. Statki musiały być pojemniejsze, szybsze. To wtedy pojawiły się złote floty, które przewoziły cenne surowce między koloniami oraz do państwa europjeskiego.
         To własnie w tamtym miały miejsce pierwsze regaty. By przypłynąć z Indii do Europy potrzebny był korzystny wiatr monsunowy, który zmienia się co 6 miesięcy. Więc statki przypływały na stary kontynent falami. Ten który przypłynął szybciej, mógł mieć większe ceny produktów. Jak konkurencja przypływała to ceny zaczynały maleć. Statki, które pozwalały na to, nazwywały się kliprami.
-      </descryption>
+      </description>
       <asidePhoto>
         <image src="/img/kliper.jpg">Kliper</image>
         <description>Kliper z XVII w. z rozłożonymi skrzydłami</description>
@@ -73,14 +73,14 @@
 
   <licenses>
     <howto>
-      <descryption>
+      <description>
         Dokumentem pozwalającym na kierowanie łodziami żaglowymi jest patent. Jego wydawaniem w Polsce zajmuje się Polski Związek Żeglarstwa.
         Wielkość dokumentu jest identyczna jak dokumentu tożsamości, prawa jazdy czy elektronicznej legitymacji studenckiej.
         Jest wykonana z plastiku, przez jest odporna za zamoczenie lub inne zniszczenia.
         By uzyskać już określone patenty należy zdać odpowiedni egzamin teoretyczny, a następnie praktyczny. Wygląda to analogicznie do zdawania na prawo jazdy w Polsce. Bez zdanej teorii nie można podejść do części praktycznej
         Ponadto należy mieć odpowiedni wiek oraz posiadać wcześniejszy stopień uprawnień. Wymagana jest też określona ilość godzin wypływanych.
         Do kierowania łodziami motorowymi potrzeba innych uprawnień niż na żaglówki. Jednak patent jachtowego sternika morskiego oraz kapitan jachtowy zyskują uprawnienia identyczne do analogicznych patentów motorowodnych.
-      </descryption>
+      </description>
       <asidePhoto>
         <image src="/img/patent_wzor.jpg">Wzór patentu</image>
         <description>Wzór patentu żeglarskiego</description>

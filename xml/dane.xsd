@@ -14,7 +14,7 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="title" type="longStringType"/>
-                    <xs:element name="descryption">
+                    <xs:element name="description">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:minLength value="80"/>
@@ -46,7 +46,7 @@
               <xs:element name="howto">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="descryption"/>
+                    <xs:element name="description"/>
                     <xs:element ref="asidePhoto" minOccurs="0"/>
                   </xs:sequence>
                 </xs:complexType>
