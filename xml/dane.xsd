@@ -32,7 +32,29 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        
+
+        <xs:element name="licenses">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="howto">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="descryption"/>
+                    <xs:element ref="asidePhoto" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="typesOfLicenses">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="license" type="licenseType" minOccurs="0" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -74,6 +96,22 @@
       <xs:element name="image" type="imageType"/>
       <xs:element name="description" type="longStringType"/>
     </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="ageType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="120"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="licenseType">
+    <xs:sequence>
+      <xs:element name="age" type="ageType"/>
+      <xs:element name="hours"/>
+      <xs:element name="qualification" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="shortStringType"/>
   </xs:complexType>
   
   <!--globbalne elementy-->

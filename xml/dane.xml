@@ -64,4 +64,68 @@
     <image src="/img/map.jpg">mapa renesansowa</image>
     <video src="/video/rejs.mp4">Rejs Żaglowcem STS - Fryderyk Chopin</video>
   </sense>
+
+  <licenses>
+    <howto>
+      <descryption>
+        Dokumentem pozwalającym na kierowanie łodziami żaglowymi jest patent. Jego wydawaniem w Polsce zajmuje się Polski Związek Żeglarstwa.
+        Wielkość dokumentu jest identyczna jak dokumentu tożsamości, prawa jazdy czy elektronicznej legitymacji studenckiej.
+        Jest wykonana z plastiku, przez jest odporna za zamoczenie lub inne zniszczenia.
+        By uzyskać już określone patenty należy zdać odpowiedni egzamin teoretyczny, a następnie praktyczny. Wygląda to analogicznie do zdawania na prawo jazdy w Polsce. Bez zdanej teorii nie można podejść do części praktycznej
+        Ponadto należy mieć odpowiedni wiek oraz posiadać wcześniejszy stopień uprawnień. Wymagana jest też określona ilość godzin wypływanych.
+        Do kierowania łodziami motorowymi potrzeba innych uprawnień niż na żaglówki. Jednak patent jachtowego sternika morskiego oraz kapitan jachtowy zyskują uprawnienia identyczne do analogicznych patentów motorowodnych.
+      </descryption>
+      <asidePhoto>
+        <image src="/img/patent_wzor.jpg">Wzór patentu</image>
+        <description>Wzór patentu żeglarskiego</description>
+      </asidePhoto>
+    </howto>
+    <typesOfLicenses>
+      
+      <license name="brak">
+        <age>18</age>
+        <hours>0</hours>
+        <qualification>
+          jacht żaglowy do 7.5 m długości
+        </qualification>
+        <qualification>
+          jacht motorowy do 10 kW (13.6 KM) mocy silnika
+        </qualification>
+        <qualification>
+          jacht motorowy do 75 kW (101.97 KM) mocy silnika pod warunkiem, że prędkość maksymalna jednsotki to 15km/h (8.4kn)
+        </qualification>
+      </license>
+      
+      <license name="Żeglarz jachtowy">
+        <age>14</age>
+        <hours>0</hours>
+        <qualification>
+          Brak ograniczeń na wodach śródlądowych
+        </qualification>
+        <qualification>
+          Na morzu - jachty do 12 m długości oraz 2 Mm od brzegu w ciągu dnia
+        </qualification>
+      </license>
+
+      <license name="Jachtowy sternik morski">
+        <age>18</age>
+        <hours>200</hours>
+        <qualification>
+          Brak ograniczeń na wodach śródlądowych
+        </qualification>
+        <qualification>
+          Na morzu - jachty do 18 m długości bez ograniczenia odległości od brzegu i pory dnia
+        </qualification>
+      </license>
+
+      <license name="Kapitan jachtowy">
+        <age>18</age>
+        <hours>600</hours>
+        <qualification>
+          Brak ograniczeń w kierowaniu jednostek
+        </qualification>
+      </license>
+      
+    </typesOfLicenses>
+  </licenses>
 </sailing>
