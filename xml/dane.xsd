@@ -16,7 +16,7 @@
                     <xs:element name="descryption" type="xs:string"/>
                     <xs:element ref="asidePhoto" minOccurs="0"/>
                   </xs:sequence>
-                  <xs:attribute name="name" type="shortStringType"/>
+                  <xs:attribute ref="name"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
@@ -124,7 +124,7 @@
       <xs:element name="hours"/>
       <xs:element name="qualification" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
-    <xs:attribute name="name" type="shortStringType"/>
+    <xs:attribute ref="name"/>
   </xs:complexType>
 
   <xs:simpleType name="contactType">
@@ -167,5 +167,7 @@
   </xs:element>
 
   <xs:attribute name="correct" type="yesno"/>
+  
+  <xs:attribute name="name" type="shortStringType"/>
   
 </xs:schema>
