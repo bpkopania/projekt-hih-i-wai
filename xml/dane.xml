@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sailing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dane.xsd">
+  <author>
+    <name>Bartosz</name>
+    <surname>Kopania</surname>
+    <id>193169</id>
+  </author>
+  
   
   <history>
     <historyEra name="Introduction">
@@ -147,4 +153,12 @@
       </answear>
     </question>
   </questionAndAnswears>
+
+  <famousSailor>
+    <sailor alive="yes">
+      <name>Robin</name>
+      <surname>Knox-Johnston</surname>
+      <about>brytyjski żeglarz, pierwszy samotnie opłynął kulę ziemską bez zawijania do portów.</about>
+    </sailor>
+  </famousSailor>
 </sailing>
