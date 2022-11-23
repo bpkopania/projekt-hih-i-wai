@@ -22,7 +22,16 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        
+
+
+        <xs:element name="sense">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="image" type="imageType" minOccurs="0" maxOccurs="unbounded"/>
+              <xs:element name="video" type="videoType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         
       </xs:sequence>
     </xs:complexType>
@@ -47,6 +56,14 @@
   <xs:complexType name="imageType">
     <xs:simpleContent>
       <xs:extension base="shortStringType">
+        <xs:attribute name="src" type="xs:anyURI"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="videoType">
+    <xs:simpleContent>
+      <xs:extension base="longStringType">
         <xs:attribute name="src" type="xs:anyURI"/>
       </xs:extension>
     </xs:simpleContent>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sailing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dane.xsd">
+  
   <history>
     <historyEra name="Introduction">
       <title>Żeglarstwo oraz jego krótka historia</title>
@@ -46,4 +47,21 @@
       </asidePhoto>
     </historyEra>
   </history>
+
+  <sense>
+    <image src="/img/view1.jpg">widoki</image>
+    <image src="/img/big_ship1.jpg">duży żaglowiec</image>
+    <image src="/img/big_ship2.jpg">duży żaglowiec</image>
+    <image src="/img/big_sail1.jpg">widoki</image>
+    <image src="/img/przechyl1.jpg">przechył</image>
+    <image src="/img/przechyl2.jpg">przechył</image>
+    <image src="/img/sunset2.jpg">zachód słońca</image>
+    <image src="/img/race1.jpg">reagty żagłówek</image>
+    <image src="/img/race2.jpg">reagty żagłówek</image>
+    <image src="/img/sunset1.jpg">zachód słońca</image>
+    <image src="/img/harbour_enter.jpg">widoki na port</image>
+    <image src="/img/lighthouse.jpg">widoki na port</image>
+    <image src="/img/map.jpg">mapa renesansowa</image>
+    <video src="/video/rejs.mp4">Rejs Żaglowcem STS - Fryderyk Chopin</video>
+  </sense>
 </sailing>
