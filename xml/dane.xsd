@@ -55,6 +55,9 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+
+        <xs:element name="contact" type="contactType"/>
+        
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -113,6 +116,10 @@
     </xs:sequence>
     <xs:attribute name="name" type="shortStringType"/>
   </xs:complexType>
+
+  <xs:simpleType name="contactType">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
   
   <!--globbalne elementy-->
 
