@@ -1,4 +1,4 @@
-<!ELEMENT sailing (author,history,sense,licenses,contact,questionAndAnswears,famousSailor)>
+<!ELEMENT sailing (author,history,sense,licenses,contact,questionAndAnswears,famousSailor,lastModified)>
 
 <!ENTITY % source "src CDATA #REQUIRED">
 <!ENTITY % yesnoType "(yes|no) 'yes'">
@@ -36,6 +36,8 @@
 <!ELEMENT sailor (name,surname,about)>
 <!ELEMENT about (#PCDATA)>
 
+<!ELEMENT lastModified (#PCDATA)>
+
 <!ATTLIST historyEra name CDATA #IMPLIED>
 <!ATTLIST image %source;>
 <!ATTLIST video %source;>
@@ -45,4 +47,3 @@
 <!ATTLIST question dataBase %yesnoType;>
 <!ATTLIST answear correct (yes|no) "no">
 <!ATTLIST sailor alive %yesnoType;>
-
