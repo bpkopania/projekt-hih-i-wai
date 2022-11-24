@@ -17,7 +17,6 @@ img{
     display: grid;
     gap: 1rem;
   
-    /* Explicit grid */
     grid-template-areas:
       'a  b  c  d'
       'l  m m e'

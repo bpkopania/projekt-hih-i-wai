@@ -2,10 +2,6 @@ main>section{
     display: flex;
 }
 
-#noscript{
-    visibility: hidden;
-}
-
 #testWindow{
     display: flex;
     height: 65vh;
@@ -17,9 +13,8 @@ main>section{
 }
 
 #test{
-    display:none;
+    display:block;
     font-size: 2vw;
-    /* height: 90%; */
     width: 100%;
 }
 
